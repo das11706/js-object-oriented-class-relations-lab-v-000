@@ -82,15 +82,14 @@ let driverId = 0;
       }
       store.trips.push(this);
     }
-    driver(){
+    driver() {
       return store.drivers.find(driver => {
-        return  driver.id === this.driverId
+        return driver.id === this.driverId
       })
     }
-      passenger(){
-      return store.passengers.find(function(passenger){
-        return passenger.tripId === this.id
+    passenger() {
+      return store.passengers.find(passenger => {
+        return passenger.id === this.passengerId
       })
     }
-
   }
